@@ -4,6 +4,7 @@ let messages = {
   inValidEmail: "Enter a valid Email!",
   inValidPassword: "Must be 6 chars long!",
   userExist: "User already exists!",
+  invalidCredientials: "Invalid Credientials!",
 };
 
 module.exports = Object.freeze(messages);
