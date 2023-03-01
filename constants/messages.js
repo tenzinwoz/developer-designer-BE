@@ -1,4 +1,4 @@
-let messages = {
+export const messages = {
   fullNameRequired: "full name is required!",
   emailRequired: "Email is required!",
   inValidEmail: "Enter a valid Email!",
@@ -7,6 +7,7 @@ let messages = {
   invalidCredientials: "Invalid Credientials!",
   authorizationDenied: "Authorization Denied!",
   noUser: "No user found!",
+  headlineRequired: "Headline is required!",
+  skillsRequired: "Skills are required!",
+  noProfile: "No profile found!",
 };
-
-module.exports = Object.freeze(messages);

@@ -1,8 +1,8 @@
-const jwt = require("jsonwebtoken");
-const messages = require("../constants/messages");
-const config = require("config");
+import jwt from "jsonwebtoken";
+import { messages } from "../constants/messages.js";
+import config from "config";
 
-const auth = async (req, res, next) => {
+export const auth = async (req, res, next) => {
   const token = req.headers["x-auth-token"];
   if (!token) {
     return res
@@ -21,4 +21,3 @@ const auth = async (req, res, next) => {
       .send({ errors: [{ msg: messages.authorizationDenied }] });
   }
 };
-module.exports = auth;

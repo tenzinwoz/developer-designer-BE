@@ -1,8 +1,10 @@
-const express = require("express");
+import express from "express";
+import { connectDB } from "./config/db.js";
+import { userRoute } from "./routes/user/index.js";
+import { authRoute } from "./routes/auth/index.js";
+import { profileRoute } from "./routes/profile/index.js";
+
 const app = express();
-const connectDB = require("./config/db");
-const user = require("./routes/user");
-const auth = require("./routes/auth");
 
 //Connect to Database
 connectDB();
@@ -11,8 +13,9 @@ connectDB();
 app.use(express.json());
 
 //App routes
-app.use("/api/user", user);
-app.use("/api/auth", auth);
+app.use("/api/user", userRoute);
+app.use("/api/auth", authRoute);
+app.use("/api/profile", profileRoute);
 
 const PORT = 8000;
 

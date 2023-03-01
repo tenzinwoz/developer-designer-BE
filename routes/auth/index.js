@@ -1,12 +1,12 @@
-const express = require("express");
+import express from "express";
 const router = express.Router();
-const messages = require("../../constants/messages");
-const { check, validationResult } = require("express-validator");
-const bcrypt = require("bcryptjs");
-const User = require("../../models/User");
-const jwt = require("jsonwebtoken");
-const config = require("config");
-const auth = require("../../middleware/auth");
+import { messages } from "../../constants/messages.js";
+import { check, validationResult } from "express-validator";
+import bcrypt from "bcryptjs";
+import { User } from "../../models/User.js";
+import jwt from "jsonwebtoken";
+import config from "config";
+import { auth } from "../../middleware/auth.js";
 
 //route :Post api/auth/
 //Desc :APi to login user
@@ -75,4 +75,4 @@ router.get("/", auth, async (req, res) => {
   }
 });
 
-module.exports = router;
+export { router as authRoute };

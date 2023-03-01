@@ -1,11 +1,11 @@
-const express = require("express");
+import express from "express";
 const router = express.Router();
-const messages = require("../../constants/messages");
-const { check, validationResult } = require("express-validator");
-const bcrypt = require("bcryptjs");
-const User = require("../../models/User");
-const jwt = require("jsonwebtoken");
-const config = require("config");
+import { messages } from "../../constants/messages.js";
+import { check, validationResult } from "express-validator";
+import bcrypt from "bcryptjs";
+import { User } from "../../models/User.js";
+import jwt from "jsonwebtoken";
+import config from "config";
 
 //route :Post api/user/register
 //Desc :APi to create a user
@@ -67,4 +67,4 @@ router.post(
   }
 );
 
-module.exports = router;
+export { router as userRoute };
