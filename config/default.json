@@ -1,4 +1,0 @@
-{
-  "mongoDB": "mongodb+srv://woeser:woeser123@cluster0.d2gjcoo.mongodb.net/Developer-Designer?retryWrites=true&w=majority",
-  "jwtSecret": "my-secret-key-for-jwt"
-}
